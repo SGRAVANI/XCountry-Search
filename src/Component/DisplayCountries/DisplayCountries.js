@@ -26,7 +26,7 @@ export default function DisplayCountries() {
         return (
             <div className={"countryCard"} key={ele.ccn3}>
               <img src={ele.flags.png} alt={ele.flags.alt} width="100" height="100" />
-              <h3>{ele.name.common}</h3>
+              <h2>{ele.name.common}</h2>
             </div>
         );
     })

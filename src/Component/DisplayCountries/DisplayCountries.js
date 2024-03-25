@@ -24,7 +24,7 @@ export default function DisplayCountries() {
     {
     let list=data.map((ele)=>{
         return (
-            <div className={"countryCard"} key={ele.ccn3}>
+            <div className="countryCard" key={ele.ccn3}>
               <img src={ele.flags.png} alt={ele.flags.alt} width="100" height="100" />
               <h2>{ele.name.common}</h2>
             </div>

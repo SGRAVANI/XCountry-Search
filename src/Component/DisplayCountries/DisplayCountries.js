@@ -39,7 +39,7 @@ export default function DisplayCountries() {
     },[])
     function search()
     {
-             let result=countryData.filter((ele)=>ele.name.common.toLowerCase().includes(searchText.toLowerCase()))
+             let result=countryData.filter((ele)=>ele.name.common.includes(searchText))
              setSearchResult(result)
     }
     useEffect(()=>{

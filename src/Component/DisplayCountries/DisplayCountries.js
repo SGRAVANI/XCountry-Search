@@ -39,7 +39,7 @@ export default function DisplayCountries() {
     },[])
     function search()
     {
-             let result=countryData.filter((ele)=>ele.name.common.includes(searchText))
+             let result=countryData.filter((ele)=>ele.name.common.toLowerCase().includes(searchText.toLowerCase()))
              setSearchResult(result)
     }
     useEffect(()=>{
@@ -67,12 +67,13 @@ export default function DisplayCountries() {
             }
         }
     }
+    const handleSearchChange = (e) => {
+        setSearchText(e.target.value);
+    };
   return (
     <div className="container" >
        
-            <input type="text" onChange={(e)=>{
-              setSearchText(e.target.value)
-            }} className="input" placeholder='Search for countries'/>
+            <input type="text" onChange={handleSearchChange} className="input" placeholder='Search for countries'/>
     
      <div className="countryContainer">
         {/* <div className={styles.countryCard}>

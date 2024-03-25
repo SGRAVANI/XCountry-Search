@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styles from "./style.module.css"
+import "./style.css"
 export default function DisplayCountries() {
     let [countryData,setData]=useState([])
     let [searchText,setSearchText]=useState("")
@@ -24,7 +24,7 @@ export default function DisplayCountries() {
     {
     let list=data.map((ele)=>{
         return (
-            <div className={styles.countryCard} key={ele.ccn3}>
+            <div className={"countryCard"} key={ele.ccn3}>
               <img src={ele.flags.png} alt={ele.flags.alt} width="100" height="100" />
               <h3>{ele.name.common}</h3>
             </div>
@@ -68,13 +68,13 @@ export default function DisplayCountries() {
         }
     }
   return (
-    <div className={styles.container} >
+    <div className="container" >
        
             <input type="text" onChange={(e)=>{
               setSearchText(e.target.value)
-            }} className={styles.input} placeholder='Search for countries'/>
+            }} className="input" placeholder='Search for countries'/>
     
-     <div className={styles.countryContainer}>
+     <div className="countryContainer">
         {/* <div className={styles.countryCard}>
          
         </div> */}
